@@ -34,53 +34,40 @@ body {
     
 }
 
-// .paperOverlay {
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background-repeat: repeat;
-//     background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
-//     mix-blend-mode: multiply;
-//     pointer-events: none;
-//     backdrop-filter: brightness(100%);
-//   }
 
-// header{
+header{
 
-//     nav{
-//         height: auto;
-//         flex-wrap: wrap;
-//     }
+    nav{
+        height: auto;
+        // flex-wrap: wrap;
+        position: relative;
+        z-index: 9;
+    }
     
-//     .navUL {
-//         background: $color1;
-//         display: flex;
-//         padding: 0.5rem;
-//         justify-content: center;
-//         gap: 5%;
-//         list-style-type: none;
-//         margin: 0;
+    .navUL {
+        background: $color1;
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        gap: 5%;
+        list-style-type: none;
+        margin: 0;
 
-//         a {
-//             @include mainFont(1.3rem, $color3, 800);
-//             text-decoration: none;
-//         }
-//     }
-// }
+        a {
+            @include mainFont(1.3rem, $color3, 800);
+            text-decoration: none;
+        }
+    }
+}
 
 .hamburger {
     background-color: #644044;
     border: none;
     border-radius: 0 0 1rem 1rem;
-    // border-width: 0.3rem;
-    // border-color: #644044;
     color: $color3;
     font-size: 2.5rem;
     height: 3rem;
     width: 3rem;
-    // aspect-ratio: 1;
     display:none;
     cursor: pointer;
     position: absolute;
@@ -90,8 +77,26 @@ body {
     :focus{
         outline: none;
     }
-
 }
+
+// nav button {
+//     // background-color: #644044;
+//     // border: none;
+//     // border-radius: 0 0 1rem 1rem;
+//     // color: $color3;
+//     // font-size: 2.5rem;
+//     // height: 3rem;
+//     // width: 3rem;
+//     // // display:none;
+//     // cursor: pointer;
+//     // position: absolute;
+//     // z-index: 10;
+//     // right: 1rem;
+
+//     // :focus{
+//     //     outline: none;
+//     // }
+// }
 
 
 .carousel-sizing {
@@ -112,7 +117,6 @@ body {
 .carousel-inner {
     max-width: 80rem;
     margin: auto;
-
 }
 
 .row {
@@ -149,24 +153,45 @@ body {
 //         width: 100%;
 //     }
 //     .navUL {
-//         display: none;
-
+//         text-align: center;
+//         flex-direction: column;
 //     }
-//     .navUL.show {
-//         display: flex;
-//         nav{
-//             height: none;
-//         }
-//     }
-//     .hamburger {
-//         display: block;
-//     }
-//     header{
-//         nav {
-//             height: 0px;
-//         }
-//     }
-
 // }
+
+
+@media (max-width:870px) {
+    .row {
+        flex-direction: column;
+    }
+    .navUL {
+        display: none !important;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .navUL.show {
+        display: flex !important;
+
+    }
+    .hamburger {
+        transform: translateY(-100%);
+        display: block;
+        animation: slideIn 350ms 200ms ease forwards;
+
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);  
+    }
+}
 
 // :is(h1, h2, h3, h4, h5, h6) 

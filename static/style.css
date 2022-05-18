@@ -4,6 +4,34 @@ body {
   position: relative;
 }
 
+header nav {
+  height: auto;
+  position: relative;
+  z-index: 9;
+}
+
+header .navUL {
+  background: #644044;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5%;
+  list-style-type: none;
+  margin: 0;
+}
+
+header .navUL a {
+  font-family: "Changa", sans-serif;
+  font-size: 1.3rem;
+  color: #E57E6E;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .hamburger {
   background-color: #644044;
   border: none;
@@ -78,5 +106,64 @@ body {
   color: #FFF8EB;
   font-weight: 400;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.36);
+}
+
+@media (max-width: 870px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navUL {
+    display: none !important;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navUL.show {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .hamburger {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    display: block;
+    -webkit-animation: slideIn 350ms 200ms ease forwards;
+            animation: slideIn 350ms 200ms ease forwards;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  50% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
