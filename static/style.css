@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;800&family=Concert+One&display=swap");
 body {
-  background-color: #FFF8EB;
+  background-color: #644044;
   position: relative;
 }
 
 header nav {
   height: auto;
   position: relative;
-  z-index: 9;
+  z-index: 10;
 }
 
 header .navUL {
@@ -19,7 +19,8 @@ header .navUL {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5%;
+  -webkit-column-gap: 5rem;
+          column-gap: 5rem;
   list-style-type: none;
   margin: 0;
 }
@@ -29,7 +30,19 @@ header .navUL a {
   font-size: 1.3rem;
   color: #E57E6E;
   font-weight: 800;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
   text-decoration: none;
+}
+
+ul li {
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+ul :hover a {
+  background: none;
+  color: #FFF8EB;
 }
 
 .hamburger {
@@ -43,7 +56,7 @@ header .navUL a {
   display: none;
   cursor: pointer;
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   right: 1rem;
 }
 
@@ -53,6 +66,7 @@ header .navUL a {
 
 .carousel-sizing {
   background-color: #57737A;
+  background-image: url("images/circle-scatter-haikei.svg");
 }
 
 .carousel-sizing img {
@@ -108,6 +122,51 @@ header .navUL a {
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.36);
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pagebreak {
+  margin: 0;
+  padding: 1rem;
+}
+
+.filterbar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
+  background-color: #E57E6E;
+  border-radius: 6%/2%;
+}
+
+.filterbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 85%;
+          flex: 1 1 85%;
+  background-color: #FFF8EB;
+  border-radius: 1%/2%;
+}
+
+.filterbox * {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 0;
+}
+
+.filterbox * img {
+  width: 100%;
+  height: auto;
+  max-width: 18rem;
+  margin: 1rem;
+}
+
 @media (max-width: 870px) {
   .row {
     -webkit-box-orient: vertical;
@@ -115,6 +174,9 @@ header .navUL a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+@media (max-width: 550px) {
   .navUL {
     display: none !important;
     text-align: center;
@@ -127,6 +189,10 @@ header .navUL a {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+    padding-bottom: 0.7rem;
+  }
+  ul :hover {
+    background-color: #8b4b56;
   }
   .hamburger {
     -webkit-transform: translateY(-100%);

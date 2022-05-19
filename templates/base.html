@@ -14,14 +14,15 @@
         <nav>
             <ul class="navUL" id="navUL">
                 <li><a href="{{ url_for('my_view.home')}}">Home</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
+                <li><a href="{{ url_for('my_view.about')}}">About</a></li>
+                <li><a href="{{ url_for('my_view.contact')}}">Contact Us</a></li>
+                <!-- <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li> -->
             </ul>
             <button class="hamburger" id="hamburger">
                 <i class="bi bi-list d-flex justify-content-center"></i>
             </button>
+            
         </nav>
     </header>
     {% block content %}
