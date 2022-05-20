@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
+{% block title %}Home{% endblock %}
 {% block content %}
-<!-- <h1>Homepage</h1> -->
 <div>
   <div class="carousel-sizing">
     <div class="carousel slide carousel-fade" id="myslider" data-ride="carousel" data-pause="false">
@@ -102,114 +102,132 @@
 </div>
 <div class="pagebreak"></div>
 <div class="flex">
-  <div class="filterbar">
-    <p>Filter search here</p>
+  <div class="filterbar" id="filterbar">
+    <!-- <input type="text" id="myInput" class="filterbutton" onkeyup="myFunction()" style="outline: none;" placeholder="Search..."> -->
+    <button class="filterbutton" id="poptoggle">Pop</button>
+    <button class="filterbutton" id="rocktoggle">Rock</button>
+    <button class="filterbutton" id="soultoggle">R&B / Soul</button>
+    <button class="filterbutton" id="indietoggle">Indie</button>
+    <button class="filterbutton" id="alternativetoggle">Alternative</button>
+    <button class="filterbutton" id="soundtracktoggle">Soundtrack</button>
+    <button class="filterbutton" id="resetfilter">Reset Filters</button>
+  </div>
+  <div class="filterexpand" id="filterexpand">
+    <i class="bi bi-list d-flex justify-content-center"></i>
   </div>
   <div class="filterbox">
-    <div class="flex">
+    <div class="flex flexgrow cardbox">
 
-      <!-- <div class="card itemcard">
-        <img src="static/images/vinyl2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div> -->
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
+        <div class="cardcontainer jsfilter pop" id="pop1">
+          <img class="img-thumbnail" src="static/images/vinyl1.jpg"  alt="">
+          <div class="cardtext overlay">
             <p>
-              Lorem ipsum dolor
+              Thriller: 40th Anniversary Alternative Sleeve Limited Edition Vinyl LP<br>
+              MICHAEL JACKSON<br>
+              £47.99
             </p>
           </div>
         </div>
 
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
+        <div class="cardcontainer jsfilter alternative" id="alternative1">
+          <img class="img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
+          <div class="cardtext overlay">
             <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
+              Big Science: Limited Edition Heavyweight Red Vinyl<br>
+              LAURIE ANDERSON<br>
+              £20.99
             </p>
           </div>
         </div>
 
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
+        <div class="cardcontainer jsfilter alternative" id="alternative2">
+          <img class="img-thumbnail" src="static/images/vinyl3.jpg"  alt="">
+          <div class="cardtext overlay">
             <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
+              Death Of A Bachelor: Limited Edition Silver Vinyl<br>
+              PANIC! AT THE DISCO<br>
+              £20.99
+            </p>
+          </div>
+        </div>
+        
+        <div class="cardcontainer jsfilter soul" id="soul1">
+          <img class="img-thumbnail" src="static/images/vinyl4.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              Tawk Tomahawk: Limited Edition Transparent Yellow Vinyl<br>
+              HIATUS KAIYOTE<br>
+              £22.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter soul" id="soul2">
+          <img class="img-thumbnail" src="static/images/vinyl5.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              Mood Valiant: Black Vinyl LP<br>
+              HIATUS KAIYOTE<br>
+              £19.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter soul" id="soul3">
+          <img class="img-thumbnail" src="static/images/vinyl6.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              What Kinda Music: Heavyweight Double Vinyl<br>
+              TOM MISCH, YUSSEF DAYES<br>
+              £22.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter rock" id="rock1">
+          <img class="img-thumbnail" src="static/images/vinyl7.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              Eliminator: Limited Edition Red Vinyl<br>
+              ZZ TOP<br>
+              £29.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter rock" id="rock2">
+          <img class="img-thumbnail" src="static/images/vinyl8.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              The Very Best Of The Stone Roses: Limited Edition Vinyl<br>
+              THE STONE ROSES<br>
+              £31.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter soundtrack" id="soundtrack1">
+          <img class="img-thumbnail" src="static/images/vinyl9.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              Blade Runner: Limited 180g Gatefold Vinyl<br>
+              VANGELIS<br>
+              £23.99
+            </p>
+          </div>
+        </div>
+        <div class="cardcontainer jsfilter indie" id="indie1">
+          <img class="img-thumbnail" src="static/images/vinyl10.jpg"  alt="">
+          <div class="cardtext overlay">
+            <p>
+              Here Comes The Cowboy - Exclusive Coloured Vinyl<br>
+              MAC DEMARCO<br>
+              £23.00
             </p>
           </div>
         </div>
 
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <img class="cardimage img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
-          <div class="cardtext">
-            <p>
-              <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, corporis. -->
-            </p>
-          </div>
-        </div>
 
       </div>
     </div>
   </div>
 </div>
+<script src="{{url_for('static', filename = 'home.js')}}"></script>
   {% endblock %}
   <!-- data-pause="false" -->
 
@@ -217,7 +235,7 @@
   <!-- create a toggle where each div for each vinyl has its own genre tags that disable and enable on the left bars selection -->
 
 
-  <div>
+  <!-- <div>
     <img src="static/images/vinyl2.jpg" alt="">
     <div><p>afaegagegaegeagegaegeage</p></div>
-  </div>
+  </div> -->

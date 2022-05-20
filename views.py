@@ -22,3 +22,11 @@ def contact():
 @my_view.route("/admin")
 def admin():
     return render_template("admin.html")
+
+@my_view.route("/recommended")
+def recommended():
+    return render_template("recommended.html")
+
+@my_view.route("/bundles")
+def bundles():
+    return render_template("bundles.html")
