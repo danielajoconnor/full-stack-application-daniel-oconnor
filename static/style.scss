@@ -78,14 +78,14 @@ header{
 
         a {
             @include mainFont(1.3rem, $color3, 800);
-            @include fadeIn(150ms);
+            transition: color 150ms ease;
             text-decoration: none;
         }
     }
 }
 
 ul li {
-    @include fadeIn(150ms);
+    transition: background-color 150ms ease;
 }
 
 
@@ -293,10 +293,6 @@ opacity: 1;
 
 .container .rec {
     max-width: 10rem !important;
-}
-
-.isvisible {
-    display: block;
 }
 
 .contact p {

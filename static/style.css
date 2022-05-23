@@ -34,14 +34,14 @@ header .navUL a {
   font-size: 1.3rem;
   color: #E57E6E;
   font-weight: 800;
-  -webkit-transition: all 150ms ease;
-  transition: all 150ms ease;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
   text-decoration: none;
 }
 
 ul li {
-  -webkit-transition: all 150ms ease;
-  transition: all 150ms ease;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
 }
 
 ul :hover a {
@@ -283,10 +283,6 @@ ul :hover a {
 
 .container .rec {
   max-width: 10rem !important;
-}
-
-.isvisible {
-  display: block;
 }
 
 .contact p {
