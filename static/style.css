@@ -235,7 +235,6 @@ ul :hover a {
   position: relative;
   max-width: 18rem;
   margin: 1rem;
-  display: none;
 }
 
 .cardcontainer:hover .overlay {
@@ -244,10 +243,6 @@ ul :hover a {
 
 .cardcontainer:active .overlay {
   opacity: 1;
-}
-
-.rock, .soul, .alternative, .indie, .soundtrack, .pop {
-  display: block !important;
 }
 
 .color5 {

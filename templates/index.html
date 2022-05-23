@@ -104,13 +104,13 @@
 <div class="flex">
   <div class="filterbar" id="filterbar">
     <!-- <input type="text" id="myInput" class="filterbutton" onkeyup="myFunction()" style="outline: none;" placeholder="Search..."> -->
-    <button class="filterbutton" id="poptoggle">Pop</button>
-    <button class="filterbutton" id="rocktoggle">Rock</button>
-    <button class="filterbutton" id="soultoggle">R&B / Soul</button>
-    <button class="filterbutton" id="indietoggle">Indie</button>
-    <button class="filterbutton" id="alternativetoggle">Alternative</button>
-    <button class="filterbutton" id="soundtracktoggle">Soundtrack</button>
-    <button class="filterbutton" id="resetfilter">Reset Filters</button>
+    <button class="filterbutton" onclick="filterGenre(pop)">Pop</button>
+    <button class="filterbutton" onclick="filterGenre(rock)">Rock</button>
+    <button class="filterbutton" onclick="filterGenre(soul)">R&B / Soul</button>
+    <button class="filterbutton" onclick="filterGenre(indie)">Indie</button>
+    <button class="filterbutton" onclick="filterGenre(alternative)">Alternative</button>
+    <button class="filterbutton" onclick="filterGenre(soundtrack)">Soundtrack</button>
+    <button class="filterbutton" onclick="resetFilter()">Reset Filters</button>
   </div>
   <div class="filterexpand" id="filterexpand">
     <i class="bi bi-list d-flex justify-content-center"></i>
@@ -118,7 +118,7 @@
   <div class="filterbox">
     <div class="flex flexgrow cardbox">
 
-        <div class="cardcontainer jsfilter pop" id="pop1">
+        <div class="cardcontainer jsfilter pop">
           <img class="img-thumbnail" src="static/images/vinyl1.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -129,7 +129,7 @@
           </div>
         </div>
 
-        <div class="cardcontainer jsfilter alternative" id="alternative1">
+        <div class="cardcontainer jsfilter alternative">
           <img class="img-thumbnail" src="static/images/vinyl2.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -140,7 +140,7 @@
           </div>
         </div>
 
-        <div class="cardcontainer jsfilter alternative" id="alternative2">
+        <div class="cardcontainer jsfilter alternative">
           <img class="img-thumbnail" src="static/images/vinyl3.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -151,7 +151,7 @@
           </div>
         </div>
         
-        <div class="cardcontainer jsfilter soul" id="soul1">
+        <div class="cardcontainer jsfilter soul">
           <img class="img-thumbnail" src="static/images/vinyl4.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -161,7 +161,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter soul" id="soul2">
+        <div class="cardcontainer jsfilter soul">
           <img class="img-thumbnail" src="static/images/vinyl5.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -171,7 +171,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter soul" id="soul3">
+        <div class="cardcontainer jsfilter soul">
           <img class="img-thumbnail" src="static/images/vinyl6.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -181,7 +181,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter rock" id="rock1">
+        <div class="cardcontainer jsfilter rock">
           <img class="img-thumbnail" src="static/images/vinyl7.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -191,7 +191,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter rock" id="rock2">
+        <div class="cardcontainer jsfilter rock">
           <img class="img-thumbnail" src="static/images/vinyl8.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -201,7 +201,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter soundtrack" id="soundtrack1">
+        <div class="cardcontainer jsfilter soundtrack">
           <img class="img-thumbnail" src="static/images/vinyl9.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -211,7 +211,7 @@
             </p>
           </div>
         </div>
-        <div class="cardcontainer jsfilter indie" id="indie1">
+        <div class="cardcontainer jsfilter indie">
           <img class="img-thumbnail" src="static/images/vinyl10.jpg"  alt="">
           <div class="cardtext overlay">
             <p>
@@ -221,21 +221,9 @@
             </p>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
 </div>
 <script src="{{url_for('static', filename = 'home.js')}}"></script>
   {% endblock %}
-  <!-- data-pause="false" -->
-
-
-  <!-- create a toggle where each div for each vinyl has its own genre tags that disable and enable on the left bars selection -->
-
-
-  <!-- <div>
-    <img src="static/images/vinyl2.jpg" alt="">
-    <div><p>afaegagegaegeagegaegeage</p></div>
-  </div> -->

@@ -60,7 +60,6 @@ header{
 
     nav{
         height: auto;
-        // flex-wrap: wrap;
         position: relative;
         z-index: 10;
 
@@ -172,18 +171,15 @@ ul :hover {
 
 .flexgrow {
     flex-grow: 1;
-    // min-width: 0;
 }
 
 .pagebreak {
     margin: 0;
     padding: 1rem;
-    // background-color: $color1;
 }
 
 .filterbar {
     flex: 1 1 15%;
-    // background-color: $color3;
     border-radius:1vh;
     padding: 0 1.2rem 0 1.2rem;
     transition: padding 250ms ease;
@@ -256,8 +252,6 @@ ul :hover {
     position: relative;
     max-width: 18rem;
     margin: 1rem;
-    display:none;
-
 }
 .cardcontainer:hover .overlay {
 opacity: 1;
@@ -265,10 +259,6 @@ opacity: 1;
 
 .cardcontainer:active .overlay {
     opacity: 1;
-}
-
-.rock, .soul, .alternative, .indie, .soundtrack, .pop {
-    display:block !important;
 }
 
 .color5{
@@ -281,10 +271,8 @@ opacity: 1;
 }
 
 .filterbutton {
-    // display: block;
     @include mainFont(1rem,$color1,800);
     width: 100%; 
-    // margin: auto;
     border-radius: 5px;
     background: $color3;
     border-top: none;
@@ -292,7 +280,6 @@ opacity: 1;
     border-right: none;
     border-bottom: solid;
     border-color: $color1;
-    // border-width: 0.1rem;
     padding: 1rem;
     @include textShadowThinner($color4);
     transition: color 250ms ease;
