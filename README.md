@@ -1,4 +1,4 @@
-# full-stack-application-daniel-oconnor
+# Full Stack Application
 
 https://trello.com/b/mvTMXqdK/code-nation-full-stack-application
 
